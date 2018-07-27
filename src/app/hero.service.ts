@@ -35,8 +35,6 @@ export class HeroService {
   }
 
   getHeroes(): Observable<Hero[]> {
-    // TODO: Send message after fetching heroes from remote server
-    this.messagesService.add('HeroService: fetched Heroes list')
     return this.http.get<Hero[]>(this.heroesUrl)
               .pipe(
                 tap(heroes => this.log('fetched heroes')),
@@ -45,7 +43,6 @@ export class HeroService {
   }
 
   getHero(id: number): Observable<Hero> {
-    //TODO: Send message after getting hero specified
     const url = '${this.heroesUrl}/${id}';
     return this.http.get<Hero>(url)
       .pipe(
