@@ -87,6 +87,6 @@ export class HeroService {
             .pipe(
               tap(_ => this.log(`found heroes matching "${term}"`)),
               catchError(this.handleError<Hero[]>('searchHeroes', []))
-            ));
+            );
   }
 }
