@@ -1,13 +1,15 @@
 {
   "name": "angular-tour-of-heroes",
   "version": "0.0.0",
+  "homepage": "https://phillter.github.io/heroes",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +36,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "gh-pages": "^1.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
